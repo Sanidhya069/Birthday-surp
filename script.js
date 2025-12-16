@@ -1,5 +1,5 @@
 let currentSlide = 0;
-let slides = document.querySelectorAll(".slide, .special");
+let slides = document.querySelectorAll(".slide");
 
 
 function nextPage() {
@@ -10,10 +10,16 @@ function nextPage() {
   music.play().catch(() => {
     console.log("Autoplay blocked until user interaction");
   });
+
+  startSlider(); 
 }
 
 
 function startSlider() {
+  slides.forEach(slide => slide.classList.remove("active"));
+  currentSlide = 0;
+  slides[0].classList.add("active");
+
   setInterval(() => {
     slides[currentSlide].classList.remove("active");
     currentSlide = (currentSlide + 1) % slides.length;
@@ -39,4 +45,5 @@ function createHeart() {
 }
 
 setInterval(createHeart, 500);
+
 
