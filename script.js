@@ -6,9 +6,12 @@ function nextPage() {
   document.getElementById("page1").classList.add("hidden");
   document.getElementById("page2").classList.remove("hidden");
 
-  document.getElementById("music").play();
-  startSlider();
+  const music = document.getElementById("music");
+  music.play().catch(() => {
+    console.log("Autoplay blocked until user interaction");
+  });
 }
+
 
 function startSlider() {
   setInterval(() => {
@@ -36,3 +39,4 @@ function createHeart() {
 }
 
 setInterval(createHeart, 500);
+
