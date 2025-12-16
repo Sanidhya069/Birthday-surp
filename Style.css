@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+
+  background:
+    linear-gradient(
+      rgba(255, 175, 189, 0.7),
+      rgba(255, 195, 160, 0.7)
+    ),
+    url("./assets/romantic-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 25px;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+ .hidden {
+  display: none;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+
+button {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #ff5e78;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.handwritten-btn {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+.handwritten-btn {
+  animation: gentleBounce 1.6s infinite;
+}
+
+@keyframes gentleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+
+
+button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 25px rgba(255, 94, 120, 0.3);
+}
+.final-btn {
+  position: relative;
+  box-shadow: 0 8px 20px rgba(255, 94, 120, 0.25);
+}
+
+.final-btn:hover {
+  box-shadow:
+    0 0 12px rgba(255, 94, 120, 0.6),
+    0 0 30px rgba(255, 94, 120, 0.4),
+    0 12px 25px rgba(255, 94, 120, 0.35);
+  transform: scale(1.07);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slider {
+  width: 260px;
+  aspect-ratio: 3 / 4;
+  margin: 25px auto;
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #ffffff60, #ffffff20);
+  border: 2px solid rgba(255,255,255,0.35);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.25),
+    inset 0 0 20px rgba(255,255,255,0.3);
+}
+
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.slide.active {
+  opacity: 1;
+}
+.special {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.special img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+
+.special.active {
+  opacity: 1;
+}
+
+.img-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 10px 15px;
+  border-radius: 15px;
+  animation: fadeText 1.5s ease-in-out;
+}
+
+@keyframes fadeText {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+.hearts span {
+  position: absolute;
+  bottom: -20px;
+  font-size: 18px;
+  animation: floatUp linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.4);
+    opacity: 0;
+  }
+}
+.heart-beat {
+  display: inline-block;
+  margin-left: 6px;
+  animation: heartBeat 1.4s infinite;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.15);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.handwritten {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  color: #2b2b2b;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+#page3 .handwritten {
+  font-size: 1.7rem;
+}
+.final-btn {
+  font-size: 1.35rem;
+  animation: none;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="container" id="page1">
+    <h1>Hey ❤️</h1>
+   <p class="handwritten">I made something special for you</p>
+
+    <button class="handwritten" onclick="nextPage()">Tap here 👀</button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="container hidden" id="page2">
+    <h1>🎂 Happy Birthday</h1>
+    <h2 id="name">Muskann!!</h2>
+
+  <div class="slider">
+    <div class="slide active">
+  <img src="images/img1.jpeg">
+</div>
+
+<div class="slide">
+  <img src="images/img2.jpeg">
+</div>
+
+<div class="slide">
+  <img src="images/img3.jpeg">
+</div>
+
+<div class="slide">
+  <img src="images/img4.jpeg">
+</div>
+
+<div class="slide">
+  <img src="images/img5.jpeg">
+</div>
+
+
+      <!-- SPECIAL IMAGE WITH TEXT -->
+      <div class="slide special">
+        <img src="images/img6.jpeg">
+        <div class="img-text">
+          “This picture? <br>
+          Yeah… iykyk the rickshaw 😌💖”
+        </div>
+      </div>
+    </div>
+
+    <p class="caption handwritten">
+      Every picture reminds me how effortlessly special you are ✨
+    </p>
+
+    <button class="handwritten-btn final-btn" onclick="showFinal()">
+  One last thing <span class="heart-beat">💌</span>
+</button>
+
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="container hidden" id="page3">
+    <h1>💖</h1>
+    <p class="handwritten">
+      I’m really grateful you exist.<br>
+      Stay the same, stay amazing.<br><br>
+      Happy Birthday once again 🎉
+    </p>
+  </div>
+
+  <audio id="music" src="music/Music.mp3.mp3"></audio>
+  <script src="script.js"></script>
+<div class="hearts"></div>
+</body>
+</html>
